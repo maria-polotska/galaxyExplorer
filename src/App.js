@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import Header from './components/Header'
+import UsersTable from './components/UsersTable'
+import Footer from './components/Footer'
+import Loader from './components/Loader';
+import { fetchAllPeople } from "./services/api";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [loading, setLoading] = useState(true);
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        fetchAllPeople()
+            .then((people) => {
+                setUsers(people);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error('Error fetching all people:', error);
+            }).finally(() => {
+                setLoading(false)
+            });
+    }, []);
+    return (
+        <div className="wrapper">
+            {loading ? <Loader /> : <>
+                <Header />
+                <UsersTable users={users}  />
+                <Footer />
+            </>}
+
+        </div>
+    );
 }
 
 export default App;
