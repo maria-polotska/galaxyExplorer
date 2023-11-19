@@ -4,15 +4,17 @@ import Footer from 'components/layout/Footer'
 import Loader from 'components/layout/Loader';
 
 import { useUsers } from 'hooks/useUsers';
-
+import styles from 'App.module.css';
 
 function App() {
     const [users, loading] = useUsers();
     return (
-        <div className="wrapper">
+        <div className={styles.wrapper}>
             {loading ? <Loader /> : <>
                 <Header />
-                <UsersTable users={users} />
+                <main>
+                    <UsersTable users={users} />
+                </main>
                 <Footer />
             </>}
 
