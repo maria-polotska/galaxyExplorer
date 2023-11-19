@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Galaxy Explorer
+### Live Demo [GalaxyExplorer](https://maria-polotska.github.io/galaxyExplorer/).
+Your mission, should you choose to accept it, is to create a one-page application with a list of people and the details about their related home planet.   The list of people and the information related to a planet can be accessed using the swapi api:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SWAPI api details: https://swapi.dev/
 
-## Available Scripts
 
-In the project directory, you can run:
+### Wireframe description: ###
 
-### `npm start`
+**The candidate should implement a table that contains a list of users with the following columns:**
+* Name
+* Height
+* Mass
+* Created
+* Edited
+* Planet Name
+  
+**When the user clicks on the planet name link a popup is displayed showing the following information regarding the planet:**
+* Name
+* Diameter
+* Climate
+* Population 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**The user should be able to sort the table by each column. The user should also be able to filter by searching the person’s name.**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Stack**
+* ES6. 
+* Webpack
+* VueJs and vue router are a plus but not necessary, use the JS framework you like, eg React, Angular, Vue etc
 
-### `npm test`
+_The candidate has 5 days to complete this assignment. The completed assignment should be sent to your recruiter._
+_This can either be a public git repository that we can access or a zipped attachment or a link to a zipped file of the completed assessment._
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
