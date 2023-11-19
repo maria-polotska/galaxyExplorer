@@ -1,31 +1,18 @@
-import { useState, useEffect } from 'react';
-import Header from './components/Header'
-import UsersTable from './components/UsersTable'
-import Footer from './components/Footer'
-import Loader from './components/Loader';
-import { fetchAllPeople } from "./services/api";
+import Header from 'components/layout/Header'
+import UsersTable from 'components/table/UsersTable'
+import Footer from 'components/layout/Footer'
+import Loader from 'components/layout/Loader';
+
+import { useUsers } from 'hooks/useUsers';
+
 
 function App() {
-    const [loading, setLoading] = useState(true);
-    const [users, setUsers] = useState([]);
-
-    useEffect(() => {
-        fetchAllPeople()
-            .then((people) => {
-                setUsers(people);
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.error('Error fetching all people:', error);
-            }).finally(() => {
-                setLoading(false)
-            });
-    }, []);
+    const [users, loading] = useUsers();
     return (
         <div className="wrapper">
             {loading ? <Loader /> : <>
                 <Header />
-                <UsersTable users={users}  />
+                <UsersTable users={users} />
                 <Footer />
             </>}
 
