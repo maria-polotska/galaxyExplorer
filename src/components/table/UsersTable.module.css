@@ -106,3 +106,30 @@
     cursor: pointer;
     text-decoration: underline;
 }
+@media screen and (max-width: 768px) {
+    .usersTable .tableBody{
+        margin-top: 43px;
+    }
+    .usersTable .tableHeader .col{
+        padding: 12px 4px;
+        font-size: 14px;
+    }
+    .usersTable .tableBody .col{
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .usersTable .tableHeader .col:nth-child(4),.usersTable .tableHeader .col:nth-child(5), .usersTable .tableBody .col:nth-child(4),.usersTable .tableBody .col:nth-child(5){
+        display:none;
+    }
+    .usersTable .tableHeader .col{
+        padding:5px;
+    }
+    .usersTable .tableBody{
+        margin-top: 29px;
+    }
+    .usersTable .rocket{
+        display: none;
+    }
+  }

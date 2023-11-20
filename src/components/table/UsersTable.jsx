@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { ReactComponent as Rocket } from 'assets/rocket.svg';
 import HomeworldModal from 'components/modal/HomeworldModal';
 import UsersTableRow from 'components/table/UsersTableRow';
@@ -23,11 +23,6 @@ const UsersTable = ({ users }) => {
         setSelectedHomeworld(homeworld);
         setOpenModal(true)
     };
-
-    useEffect(() => {
-        sortHandler(columnName);
-        // eslint-disable-next-line
-    }, []);
 
     const rocket = <Rocket className={`${styles.rocket} ${ascending ? styles.up : styles.down}`} />;
 

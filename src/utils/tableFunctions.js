@@ -17,9 +17,3 @@ export const sortColumn = (users, columnName, key = "name", ascending = false) =
         isAscending: nextAscending,
     };
 };
-
-// export const filterData = (sortedData, searchQuery) => {
-//     return sortedData.filter(user =>
-//         user.name.toLowerCase().includes(searchQuery.toLowerCase())
-//     );
-// };

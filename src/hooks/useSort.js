@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { sortColumn } from 'utils/tableFunctions';
 
 export function useSort(users) {
@@ -13,6 +13,11 @@ export function useSort(users) {
         setColumnName(column);
         setAscending(isAscending);
     };
+
+    useEffect(() => {
+        sortHandler(columnName);
+        // eslint-disable-next-line
+    }, []);
 
     return [sortedUsers, columnName, ascending, sortHandler]
 }
